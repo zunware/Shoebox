@@ -28,6 +28,8 @@
     }
     [self.statusItem setImage:[NSImage imageNamed:@"StatusBarImageButton"]];
     [self.statusItem setAction:@selector(printQuote:)];
+    
+    
 }
 
 
