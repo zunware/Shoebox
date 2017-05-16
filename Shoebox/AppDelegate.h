@@ -10,6 +10,9 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (strong, nonatomic) NSStatusItem *statusItem;
+@property (assign, nonatomic) BOOL darkModeOn;
+
 
 @end
 
