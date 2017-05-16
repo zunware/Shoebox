@@ -29,6 +29,15 @@
     [self.statusItem setImage:[NSImage imageNamed:@"StatusBarImageButton"]];
     [self.statusItem setAction:@selector(printQuote:)];
     
+    NSMenu* menu = [[NSMenu alloc] init];
+    NSMenuItem* first_item = [[NSMenuItem alloc] initWithTitle:@"Print Quote" action:@selector(printQuote:) keyEquivalent:@"P"];
+    [menu addItem:first_item];
+    
+    [menu addItem:[NSMenuItem separatorItem]];
+    NSMenuItem* second_item = [[NSMenuItem alloc] initWithTitle:@"Quit Program" action:@selector(terminate:) keyEquivalent:@"q"];
+    [menu addItem:second_item];
+    
+    [self.statusItem setMenu:menu];
     
 }
 
