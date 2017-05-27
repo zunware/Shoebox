@@ -15,5 +15,6 @@
 -(NSString*)runPythonFromPath:(NSString*)path;
 -(NSString*)runPythonFromResources:(NSString*)script_name;
 -(void)runBunchOfScripts;
+-(void)launchTerminal;
 
 @end

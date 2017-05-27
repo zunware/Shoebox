@@ -35,10 +35,16 @@
                                                             action:@selector(openTerminal:)
                                                      keyEquivalent:@"R"];
     
+    NSMenuItem* getInputItem = [[NSMenuItem alloc] initWithTitle:@"Get Input"
+                                                            action:@selector(getInput:)
+                                                     keyEquivalent:@"I"];
+    
+    
     NSMenuItem* second_item = [[NSMenuItem alloc] initWithTitle:@"Quit Program" action:@selector(terminate:) keyEquivalent:@"q"];
     
     [menu addItem:first_item];
     [menu addItem:runCommandItem];
+    [menu addItem:getInputItem];
     [menu addItem:[NSMenuItem separatorItem]];
     [menu addItem:second_item];
     
@@ -60,13 +66,32 @@
 }
 
 -(void)openTerminal:(id)sender {
-    NSString* command = @"pwd";
-    NSString *s = [NSString stringWithFormat:
-     @"tell application \"Terminal\" to do script \"%@\"", command];
+//    NSString* command = @"pwd";
+//    NSString *s = [NSString stringWithFormat:
+//     @"tell application \"Terminal\" to do script \"%@\"", command];
 
-    NSAppleScript *as = [[NSAppleScript alloc] initWithSource: s];
+//    NSAppleScript *as = [[NSAppleScript alloc] initWithSource: s];
     
-    [as executeAndReturnError:nil];
+//    [as executeAndReturnError:nil];
+
+    [[LLCodeRunner getInstance] launchTerminal];
+}
+
+-(void)getInput:(id)sender {
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"Some input?"];
+    [alert addButtonWithTitle:@"Ok"];
+    [alert addButtonWithTitle:@"Cancel"];
+
+    NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
+    [input setStringValue:@""];
+    [alert setAccessoryView:input];
+    NSInteger button = [alert runModal];
+    if (button == NSAlertFirstButtonReturn) {
+        NSString* inputThing = [input stringValue];
+    } else if (button == NSAlertSecondButtonReturn) {
+        // The user cancelled
+    }
 }
 
 

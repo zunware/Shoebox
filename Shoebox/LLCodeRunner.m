@@ -6,6 +6,7 @@
 //  Copyright © 2017 Llau Systems. All rights reserved.
 //
 
+#import <AppKit/NSWorkspace.h>
 #import "LLCodeRunner.h"
 
 @implementation LLCodeRunner
@@ -95,6 +96,10 @@
 -(void)scriptsFinishedWithResults:(NSArray*)results {
     // Check the results for scripts here
     NSLog(@"%@", results);
+}
+
+-(void)launchTerminal {
+    [[NSWorkspace sharedWorkspace] launchApplication:@"/Applications/Utilities/Terminal.app"];
 }
 
 @end
