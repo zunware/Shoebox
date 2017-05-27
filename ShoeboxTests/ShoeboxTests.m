@@ -26,11 +26,15 @@
 }
 
 - (void)test_run_python {
-    XCTAssertNotNil([[LLCodeRunner getInstance] runPython:@"test_python"]);
+    XCTAssertNotNil([[LLCodeRunner getInstance] runPythonFromResources:@"test_python"]);
 }
 
 -(void)test_run_bunch_of_scripts {
     [[LLCodeRunner getInstance] runBunchOfScripts];
+}
+
+-(void)test_run_python_from_hd {
+    [[LLCodeRunner getInstance] runPythonFromPath:@"/Users/pp/Desktop/hi.py"];
 }
 
 @end

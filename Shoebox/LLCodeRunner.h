@@ -12,7 +12,8 @@
 
 +(id)getInstance;
 
--(NSString*)runPython:(NSString*)script_name;
+-(NSString*)runPythonFromPath:(NSString*)path;
+-(NSString*)runPythonFromResources:(NSString*)script_name;
 -(void)runBunchOfScripts;
 
 @end

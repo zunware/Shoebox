@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LLCodeRunner.h"
 
 @interface AppDelegate ()
 
@@ -17,22 +18,23 @@
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    
-
-    // Insert code here to initialize your application
-    
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     NSImage* image = [NSImage imageNamed:@"StatusBarImageButton"];
     if(image == NULL) {
-        NSLog(@"Suck it");
+        NSLog(@"Bad image");
     }
     [self.statusItem setImage:[NSImage imageNamed:@"StatusBarImageButton"]];
-    [self.statusItem setAction:@selector(printQuote:)];
     
     NSMenu* menu = [[NSMenu alloc] init];
     
-    NSMenuItem* first_item = [[NSMenuItem alloc] initWithTitle:@"Print Quote" action:@selector(printQuote:) keyEquivalent:@"P"];
-    NSMenuItem* runCommandItem = [[NSMenuItem alloc] initWithTitle:@"Run command" action:@selector(openTerminal:) keyEquivalent:@"R"];
+    NSMenuItem* first_item = [[NSMenuItem alloc] initWithTitle:@"Run Python"
+                                                        action:@selector(runPythonScript:)
+                                                 keyEquivalent:@"P"];
+    
+    NSMenuItem* runCommandItem = [[NSMenuItem alloc] initWithTitle:@"Run Terminal"
+                                                            action:@selector(openTerminal:)
+                                                     keyEquivalent:@"R"];
+    
     NSMenuItem* second_item = [[NSMenuItem alloc] initWithTitle:@"Quit Program" action:@selector(terminate:) keyEquivalent:@"q"];
     
     [menu addItem:first_item];
@@ -48,11 +50,13 @@
     // Insert code here to tear down your application
 }
 
--(void) printQuote:(id)sender {
-    NSString* quoteText = @"Queso queso queso";
-    NSString* quoteAuthor = @"Me";
-    
-    NSLog(@"%@ %@", quoteText, quoteAuthor);
+-(void) runPythonScript:(id)sender {
+    NSString* return_code = [[LLCodeRunner getInstance] runPythonFromResources:@"test_python"];
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert setMessageText:return_code];
+    [alert setAlertStyle:NSAlertStyleWarning];
+    [alert runModal];
 }
 
 -(void)openTerminal:(id)sender {
