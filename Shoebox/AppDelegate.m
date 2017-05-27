@@ -30,15 +30,17 @@
     [self.statusItem setAction:@selector(printQuote:)];
     
     NSMenu* menu = [[NSMenu alloc] init];
-    NSMenuItem* first_item = [[NSMenuItem alloc] initWithTitle:@"Print Quote" action:@selector(printQuote:) keyEquivalent:@"P"];
-    [menu addItem:first_item];
     
-    [menu addItem:[NSMenuItem separatorItem]];
+    NSMenuItem* first_item = [[NSMenuItem alloc] initWithTitle:@"Print Quote" action:@selector(printQuote:) keyEquivalent:@"P"];
+    NSMenuItem* runCommandItem = [[NSMenuItem alloc] initWithTitle:@"Run command" action:@selector(openTerminal:) keyEquivalent:@"R"];
     NSMenuItem* second_item = [[NSMenuItem alloc] initWithTitle:@"Quit Program" action:@selector(terminate:) keyEquivalent:@"q"];
+    
+    [menu addItem:first_item];
+    [menu addItem:runCommandItem];
+    [menu addItem:[NSMenuItem separatorItem]];
     [menu addItem:second_item];
     
     [self.statusItem setMenu:menu];
-    
 }
 
 
@@ -52,6 +54,17 @@
     
     NSLog(@"%@ %@", quoteText, quoteAuthor);
 }
+
+-(void)openTerminal:(id)sender {
+    NSString* command = @"pwd";
+    NSString *s = [NSString stringWithFormat:
+     @"tell application \"Terminal\" to do script \"%@\"", command];
+
+    NSAppleScript *as = [[NSAppleScript alloc] initWithSource: s];
+    
+    [as executeAndReturnError:nil];
+}
+
 
 
 @end

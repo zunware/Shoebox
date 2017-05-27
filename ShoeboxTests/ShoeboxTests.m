@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "LLCodeRunner.h"
 
 @interface ShoeboxTests : XCTestCase
 
@@ -24,16 +25,12 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)test_run_python {
+    XCTAssertNotNil([[LLCodeRunner getInstance] runPython:@"test_python"]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+-(void)test_run_bunch_of_scripts {
+    [[LLCodeRunner getInstance] runBunchOfScripts];
 }
 
 @end
