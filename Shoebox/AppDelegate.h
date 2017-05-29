@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) NSStatusItem *statusItem;
 @property (assign, nonatomic) BOOL darkModeOn;
+@property NSPopover* pop_over;
+@property NSMenu* menu;
 
 
 @end

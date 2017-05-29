@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LLCodeRunner.h"
+#import "LLMenuBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,18 +16,24 @@
 
 @implementation AppDelegate
 
-
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     NSImage* image = [NSImage imageNamed:@"StatusBarImageButton"];
     if(image == NULL) {
         NSLog(@"Bad image");
     }
+    // [self setupenu];
     [self.statusItem setImage:[NSImage imageNamed:@"StatusBarImageButton"]];
+    [self.statusItem.button setAction:@selector(togglePopover:)];
+    self.pop_over = [[NSPopover alloc] init];
+    [self.pop_over setContentViewController:
+    [[LLMenuBarViewController alloc] initWithNibName:@"LLMenuBarViewController" bundle:nil]];
+}
+
+-(void)setupMenu {
     
-    NSMenu* menu = [[NSMenu alloc] init];
-    
+    self.menu = [[NSMenu alloc] init];
+
     NSMenuItem* first_item = [[NSMenuItem alloc] initWithTitle:@"Run Python"
                                                         action:@selector(runPythonScript:)
                                                  keyEquivalent:@"P"];
@@ -39,17 +46,61 @@
                                                             action:@selector(getInput:)
                                                      keyEquivalent:@"I"];
     
+    NSMenuItem* showPopoverMenuItem = [[NSMenuItem alloc] initWithTitle:@"Show Popover"
+                                                            action:@selector(showPopover:)
+                                                     keyEquivalent:@"S"];
+    
     
     NSMenuItem* second_item = [[NSMenuItem alloc] initWithTitle:@"Quit Program" action:@selector(terminate:) keyEquivalent:@"q"];
     
-    [menu addItem:first_item];
-    [menu addItem:runCommandItem];
-    [menu addItem:getInputItem];
-    [menu addItem:[NSMenuItem separatorItem]];
-    [menu addItem:second_item];
+    [self.menu addItem:first_item];
+    [self.menu addItem:runCommandItem];
+    [self.menu addItem:getInputItem];
+    [self.menu addItem:showPopoverMenuItem];
+    [self.menu addItem:[NSMenuItem separatorItem]];
+    [self.menu addItem:second_item];
     
-    [self.statusItem setMenu:menu];
+    [self.statusItem setMenu:self.menu];
 }
+
+-(void) showPopover:(id)sender {
+    NSButton* b = self.statusItem.button;
+    if(b != nil) {
+        [self.pop_over showRelativeToRect:b.bounds ofView:b preferredEdge:NSMinYEdge];
+    }
+}
+
+-(void) closePopover:(id)sender {
+    [self.pop_over performClose:sender];
+}
+
+-(void)openMenu:(id)sender {
+    if([self.pop_over isShown])
+    {
+        [self closePopover:sender];
+    }
+    
+    if([NSMenu menuBarVisible]) {
+        [self.menu cancelTracking];
+    } else {
+        [self.statusItem popUpStatusItemMenu:self.menu];
+    }
+    
+    
+}
+
+-(void)togglePopover:(id)sender
+{
+    if([self.pop_over isShown])
+    {
+        [self closePopover:sender];
+    }
+    else
+    {
+        [self showPopover:sender];
+    }
+}
+
 
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -65,15 +116,17 @@
     [alert runModal];
 }
 
--(void)openTerminal:(id)sender {
-//    NSString* command = @"pwd";
-//    NSString *s = [NSString stringWithFormat:
-//     @"tell application \"Terminal\" to do script \"%@\"", command];
+-(void)runCommandWithAppleScript:(id)sender {
+    NSString* command = @"pwd";
+    NSString *s = [NSString stringWithFormat:
+     @"tell application \"Terminal\" to do script \"%@\"", command];
 
-//    NSAppleScript *as = [[NSAppleScript alloc] initWithSource: s];
+    NSAppleScript *as = [[NSAppleScript alloc] initWithSource: s];
     
-//    [as executeAndReturnError:nil];
+    [as executeAndReturnError:nil];
+}
 
+-(void)openTerminal:(id)sender {
     [[LLCodeRunner getInstance] launchTerminal];
 }
 
@@ -89,6 +142,7 @@
     NSInteger button = [alert runModal];
     if (button == NSAlertFirstButtonReturn) {
         NSString* inputThing = [input stringValue];
+        NSLog(@"%@", inputThing);
     } else if (button == NSAlertSecondButtonReturn) {
         // The user cancelled
     }

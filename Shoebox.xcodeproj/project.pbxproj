@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE1D15841EDBBC01004CC0D8 /* LLMenuBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D15821EDBBC01004CC0D8 /* LLMenuBarViewController.m */; };
+		EE1D15851EDBBC01004CC0D8 /* LLMenuBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1D15831EDBBC01004CC0D8 /* LLMenuBarViewController.xib */; };
 		EE556F891ECA456000C7A5AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE556F881ECA456000C7A5AA /* AppDelegate.m */; };
 		EE556F8C1ECA456000C7A5AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE556F8B1ECA456000C7A5AA /* main.m */; };
 		EE556F8F1ECA456000C7A5AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE556F8E1ECA456000C7A5AA /* ViewController.m */; };
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE1D15811EDBBC01004CC0D8 /* LLMenuBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLMenuBarViewController.h; sourceTree = "<group>"; };
+		EE1D15821EDBBC01004CC0D8 /* LLMenuBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLMenuBarViewController.m; sourceTree = "<group>"; };
+		EE1D15831EDBBC01004CC0D8 /* LLMenuBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLMenuBarViewController.xib; sourceTree = "<group>"; };
 		EE556F841ECA456000C7A5AA /* Shoebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE556F871ECA456000C7A5AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE556F881ECA456000C7A5AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +120,9 @@
 				EE556F8A1ECA456000C7A5AA /* Supporting Files */,
 				EEC80AF61ED94977007FFC14 /* LLCodeRunner.h */,
 				EEC80AF71ED94977007FFC14 /* LLCodeRunner.m */,
+				EE1D15811EDBBC01004CC0D8 /* LLMenuBarViewController.h */,
+				EE1D15821EDBBC01004CC0D8 /* LLMenuBarViewController.m */,
+				EE1D15831EDBBC01004CC0D8 /* LLMenuBarViewController.xib */,
 			);
 			path = Shoebox;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE556F911ECA456000C7A5AA /* Assets.xcassets in Resources */,
+				EE1D15851EDBBC01004CC0D8 /* LLMenuBarViewController.xib in Resources */,
 				EE556F941ECA456000C7A5AA /* Main.storyboard in Resources */,
 				EEC80AFA1ED950BE007FFC14 /* test_python.py in Resources */,
 			);
@@ -283,6 +292,7 @@
 				EE556F8C1ECA456000C7A5AA /* main.m in Sources */,
 				EEC80AF81ED94977007FFC14 /* LLCodeRunner.m in Sources */,
 				EE556F891ECA456000C7A5AA /* AppDelegate.m in Sources */,
+				EE1D15841EDBBC01004CC0D8 /* LLMenuBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
