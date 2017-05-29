@@ -10,6 +10,9 @@
 
 @interface LLMenuBarViewController : NSViewController
 
+- (IBAction)okPressed:(id)sender;
+
+@property (weak) IBOutlet NSTextField *text_input;
 
 
 @end

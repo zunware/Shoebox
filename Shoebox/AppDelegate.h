@@ -15,6 +15,8 @@
 @property NSPopover* pop_over;
 @property NSMenu* menu;
 
+-(void) closePopover:(id)sender;
+
 
 @end
 
