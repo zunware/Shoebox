@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11797641F65796E96DB1EC66 /* libPods-ShoeboxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBCE47DFC04CBB1016D2B23 /* libPods-ShoeboxTests.a */; };
+		369A035CD6B1C63713F5CEE9 /* libPods-Shoebox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F45A691D52C5F2351D8082DE /* libPods-Shoebox.a */; };
+		A143805AF21FA21C3EE3B659 /* libPods-ShoeboxUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8881E2FB519D25F98D669B92 /* libPods-ShoeboxUITests.a */; };
 		EE1D15841EDBBC01004CC0D8 /* LLMenuBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D15821EDBBC01004CC0D8 /* LLMenuBarViewController.m */; };
 		EE1D15851EDBBC01004CC0D8 /* LLMenuBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1D15831EDBBC01004CC0D8 /* LLMenuBarViewController.xib */; };
 		EE556F891ECA456000C7A5AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE556F881ECA456000C7A5AA /* AppDelegate.m */; };
@@ -39,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19137646A2D7A5BA912CEC60 /* Pods-ShoeboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeboxUITests/Pods-ShoeboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		669D7919D959276C45544388 /* Pods-Shoebox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoebox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shoebox/Pods-Shoebox.debug.xcconfig"; sourceTree = "<group>"; };
+		7FA8363F2ABCFFA6A5AFD240 /* Pods-Shoebox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoebox.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shoebox/Pods-Shoebox.release.xcconfig"; sourceTree = "<group>"; };
+		8881E2FB519D25F98D669B92 /* libPods-ShoeboxUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeboxUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97B48F1224D0603446BE3F8C /* Pods-ShoeboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeboxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeboxTests/Pods-ShoeboxTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB4AD44C65308DD585B050E8 /* Pods-ShoeboxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeboxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeboxTests/Pods-ShoeboxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B2D2AD41BA414EA57F8B14DC /* Pods-ShoeboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeboxUITests/Pods-ShoeboxUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CDBCE47DFC04CBB1016D2B23 /* libPods-ShoeboxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeboxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1D15811EDBBC01004CC0D8 /* LLMenuBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLMenuBarViewController.h; sourceTree = "<group>"; };
 		EE1D15821EDBBC01004CC0D8 /* LLMenuBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLMenuBarViewController.m; sourceTree = "<group>"; };
 		EE1D15831EDBBC01004CC0D8 /* LLMenuBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLMenuBarViewController.xib; sourceTree = "<group>"; };
@@ -60,6 +71,7 @@
 		EEC80AF61ED94977007FFC14 /* LLCodeRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCodeRunner.h; sourceTree = "<group>"; };
 		EEC80AF71ED94977007FFC14 /* LLCodeRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCodeRunner.m; sourceTree = "<group>"; };
 		EEC80AF91ED950BE007FFC14 /* test_python.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test_python.py; sourceTree = "<group>"; };
+		F45A691D52C5F2351D8082DE /* libPods-Shoebox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shoebox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369A035CD6B1C63713F5CEE9 /* libPods-Shoebox.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11797641F65796E96DB1EC66 /* libPods-ShoeboxTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,12 +95,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A143805AF21FA21C3EE3B659 /* libPods-ShoeboxUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B1F1CB721196F991FC53125 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				669D7919D959276C45544388 /* Pods-Shoebox.debug.xcconfig */,
+				7FA8363F2ABCFFA6A5AFD240 /* Pods-Shoebox.release.xcconfig */,
+				AB4AD44C65308DD585B050E8 /* Pods-ShoeboxTests.debug.xcconfig */,
+				97B48F1224D0603446BE3F8C /* Pods-ShoeboxTests.release.xcconfig */,
+				19137646A2D7A5BA912CEC60 /* Pods-ShoeboxUITests.debug.xcconfig */,
+				B2D2AD41BA414EA57F8B14DC /* Pods-ShoeboxUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E6E9569A1941051168084F37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F45A691D52C5F2351D8082DE /* libPods-Shoebox.a */,
+				CDBCE47DFC04CBB1016D2B23 /* libPods-ShoeboxTests.a */,
+				8881E2FB519D25F98D669B92 /* libPods-ShoeboxUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE556F7B1ECA456000C7A5AA = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +132,8 @@
 				EE556F9D1ECA456000C7A5AA /* ShoeboxTests */,
 				EE556FA81ECA456000C7A5AA /* ShoeboxUITests */,
 				EE556F851ECA456000C7A5AA /* Products */,
+				9B1F1CB721196F991FC53125 /* Pods */,
+				E6E9569A1941051168084F37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE556FAE1ECA456000C7A5AA /* Build configuration list for PBXNativeTarget "Shoebox" */;
 			buildPhases = (
+				E5B01AE5ADB64F08AF2DF001 /* [CP] Check Pods Manifest.lock */,
 				EE556F801ECA456000C7A5AA /* Sources */,
 				EE556F811ECA456000C7A5AA /* Frameworks */,
 				EE556F821ECA456000C7A5AA /* Resources */,
+				99596294AD45B5D448ECDF59 /* [CP] Embed Pods Frameworks */,
+				E9B2ECDC7BC004FC48804F24 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE556FB11ECA456000C7A5AA /* Build configuration list for PBXNativeTarget "ShoeboxTests" */;
 			buildPhases = (
+				70C858DA17ED2B72E9ABA588 /* [CP] Check Pods Manifest.lock */,
 				EE556F961ECA456000C7A5AA /* Sources */,
 				EE556F971ECA456000C7A5AA /* Frameworks */,
 				EE556F981ECA456000C7A5AA /* Resources */,
+				0723F4B8243ACF90AE39BACC /* [CP] Embed Pods Frameworks */,
+				CF205DFC884DE79AAD346965 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE556FB41ECA456000C7A5AA /* Build configuration list for PBXNativeTarget "ShoeboxUITests" */;
 			buildPhases = (
+				4C540656DBB15B37113B54E9 /* [CP] Check Pods Manifest.lock */,
 				EE556FA11ECA456000C7A5AA /* Sources */,
 				EE556FA21ECA456000C7A5AA /* Frameworks */,
 				EE556FA31ECA456000C7A5AA /* Resources */,
+				9BD2EFE555467301BCC2740D /* [CP] Embed Pods Frameworks */,
+				7F2E18E86EF990DC7F36D0D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,6 +331,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0723F4B8243ACF90AE39BACC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoeboxTests/Pods-ShoeboxTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C540656DBB15B37113B54E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		70C858DA17ED2B72E9ABA588 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7F2E18E86EF990DC7F36D0D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoeboxUITests/Pods-ShoeboxUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99596294AD45B5D448ECDF59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shoebox/Pods-Shoebox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BD2EFE555467301BCC2740D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoeboxUITests/Pods-ShoeboxUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF205DFC884DE79AAD346965 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoeboxTests/Pods-ShoeboxTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B01AE5ADB64F08AF2DF001 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9B2ECDC7BC004FC48804F24 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shoebox/Pods-Shoebox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE556F801ECA456000C7A5AA /* Sources */ = {
@@ -431,6 +618,7 @@
 		};
 		EE556FAF1ECA456000C7A5AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 669D7919D959276C45544388 /* Pods-Shoebox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -444,6 +632,7 @@
 		};
 		EE556FB01ECA456000C7A5AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FA8363F2ABCFFA6A5AFD240 /* Pods-Shoebox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -457,6 +646,7 @@
 		};
 		EE556FB21ECA456000C7A5AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB4AD44C65308DD585B050E8 /* Pods-ShoeboxTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -470,6 +660,7 @@
 		};
 		EE556FB31ECA456000C7A5AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97B48F1224D0603446BE3F8C /* Pods-ShoeboxTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -483,6 +674,7 @@
 		};
 		EE556FB51ECA456000C7A5AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19137646A2D7A5BA912CEC60 /* Pods-ShoeboxUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ShoeboxUITests/Info.plist;
@@ -495,6 +687,7 @@
 		};
 		EE556FB61ECA456000C7A5AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2D2AD41BA414EA57F8B14DC /* Pods-ShoeboxUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ShoeboxUITests/Info.plist;
