@@ -6,7 +6,7 @@ target 'Shoebox' do
   # use_frameworks!
 
   # Pods for Shoebox
-  pod 'MQTTClient'
+#  pod 'MQTTClient'
 
   target 'ShoeboxTests' do
     inherit! :search_paths
