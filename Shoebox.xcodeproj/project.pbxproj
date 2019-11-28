@@ -50,6 +50,7 @@
 		AB4AD44C65308DD585B050E8 /* Pods-ShoeboxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeboxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeboxTests/Pods-ShoeboxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2D2AD41BA414EA57F8B14DC /* Pods-ShoeboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoeboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoeboxUITests/Pods-ShoeboxUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CDBCE47DFC04CBB1016D2B23 /* libPods-ShoeboxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoeboxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1C8CB4225ABAFF00991B7C /* loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loader.h; sourceTree = "<group>"; };
 		EE1D15811EDBBC01004CC0D8 /* LLMenuBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLMenuBarViewController.h; sourceTree = "<group>"; };
 		EE1D15821EDBBC01004CC0D8 /* LLMenuBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLMenuBarViewController.m; sourceTree = "<group>"; };
 		EE1D15831EDBBC01004CC0D8 /* LLMenuBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLMenuBarViewController.xib; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 				EE1D15811EDBBC01004CC0D8 /* LLMenuBarViewController.h */,
 				EE1D15821EDBBC01004CC0D8 /* LLMenuBarViewController.m */,
 				EE1D15831EDBBC01004CC0D8 /* LLMenuBarViewController.xib */,
+				EE1C8CB4225ABAFF00991B7C /* loader.h */,
 			);
 			path = Shoebox;
 			sourceTree = "<group>";

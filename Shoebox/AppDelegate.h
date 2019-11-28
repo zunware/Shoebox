@@ -7,9 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "MQTTClient.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, MQTTSessionDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (strong, nonatomic) NSStatusItem *statusItem;
 @property (assign, nonatomic) BOOL darkModeOn;
@@ -17,6 +16,9 @@
 @property NSMenu* menu;
 
 -(void) closePopover:(id)sender;
+-(void) openTerminal:(id)sender;
+-(void) openTerminal:(id)sender command:(NSString*)cmd args:(NSArray*)args;
+-(void)runCommandWithAppleScript:(id)sender;
 
 
 @end

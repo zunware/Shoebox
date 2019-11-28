@@ -28,23 +28,6 @@
     self.pop_over = [[NSPopover alloc] init];
     [self.pop_over setContentViewController:
     [[LLMenuBarViewController alloc] initWithNibName:@"LLMenuBarViewController" bundle:nil]];
-    
-    // Setup MQTT
-//    MQTTCFSocketTransport *transport = [[MQTTCFSocketTransport alloc] init];
-//    transport.host = @"192.168.5.137";
-//    transport.port = 1883;
-//
-//    MQTTSession *session = [[MQTTSession alloc] init];
-//    session.transport = transport;
-//    session.delegate = self;
-//    [session connectAndWaitTimeout:30];
-//    
-//    NSString* payload = @"Hola que ase?";
-//    [session publishAndWaitData:[payload dataUsingEncoding:NSUTF8StringEncoding]
-//                    onTopic:@"topic"
-//                     retain:NO
-//                    qos:MQTTQosLevelAtLeastOnce]; // this is part of the asynchronous API
-
 }
 
 -(void)setupMenu {
@@ -145,6 +128,10 @@
 
 -(void)openTerminal:(id)sender {
     [[LLCodeRunner getInstance] launchTerminal];
+}
+
+-(void) openTerminal:(id)sender command:(NSString*)cmd args:(NSArray*)args {
+    [[LLCodeRunner getInstance] runCommand:cmd args:args];
 }
 
 -(void)getInput:(id)sender {

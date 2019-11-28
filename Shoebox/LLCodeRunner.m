@@ -102,4 +102,27 @@
     [[NSWorkspace sharedWorkspace] launchApplication:@"/Applications/Utilities/Terminal.app"];
 }
 
+-(NSString*)runCommand:(NSString *)cmd args:(NSArray*)args {
+    int pid = [[NSProcessInfo processInfo] processIdentifier];
+    NSPipe *pipe = [NSPipe pipe];
+    NSFileHandle *file = pipe.fileHandleForReading;
+    
+    NSArray* fullArgs = [@[cmd] arrayByAddingObjectsFromArray:args];
+    
+    NSTask *task = [[NSTask alloc] init];
+    task.launchPath = @"/usr/bin/env bash";
+    task.arguments = fullArgs;
+    task.standardOutput = pipe;
+    
+    [task launch];
+    
+    NSData *data = [file readDataToEndOfFile];
+    [file closeFile];
+    
+    NSString *output = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+    NSLog (@"%i command returned:\n%@", pid, output);
+    
+    return output;
+}
+
 @end
